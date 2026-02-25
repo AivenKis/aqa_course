@@ -6,8 +6,10 @@ toppings = ["chocolate", "cinnamon", "caramel", "condensed milk"]
 print("Erik's Coffee Shop drinks")
 print("-------------------------")
 
+# Затем мы вывели списки с помощью циклов. А затем мы вывели цифры рядом с каждым напитком или вкусом
+
 i = int(1)
-for d in drinks:  # Затем мы вывели списки с помощью циклов. А затем мы вывели цифры рядом с каждым напитком или вкусом
+for d in drinks:
     print(i, d)
     i = i + 1
 drink = input("Choose your drink")
@@ -23,6 +25,7 @@ flavor = input("Choose your flavor")
 
 print("Erik's Coffee Shop flavors")
 print("-------------------------")
+
 i = int(1)
 for t in toppings:
     print(i, t)
