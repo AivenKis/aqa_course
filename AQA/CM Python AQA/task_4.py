@@ -28,3 +28,5 @@ def modify_list():
 # Запуск функции и вывод результата
 modified_list = modify_list()
 print("Результат:", modified_list)
+
+

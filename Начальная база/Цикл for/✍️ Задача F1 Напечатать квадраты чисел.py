@@ -24,3 +24,15 @@ for num in numbers:
 for num in numbers:
     square = num * num
     print(f"Квадрат числа {num} равен {num * num}")
+
+
+def temp_work():
+    temp_list = [10, 20] # Создали в куче, ссылка в стеке функции
+    print(temp_list)
+    # Функция завершается здесь.
+
+temp_work()
+# Стек функции 'temp_work' уничтожен.
+# Ссылка 'temp_list' пропала -> Ссылок на список [10, 20] больше нет -> GC удаляет его.
+
+
