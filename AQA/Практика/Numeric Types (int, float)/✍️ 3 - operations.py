@@ -1,5 +1,14 @@
 # Попросите пользователя ввести два числа и выведите их сумму, разность, произведение, частное, результат целочисленного деления и остаток от деления.
 
+def validate_input(prompt: str) -> float:
+    while True:
+        try:
+            return float(input(prompt))
+
+        except ValueError:
+            print("ERROR! Please enter a number.\n")
+
+
 def operation(operation):
     if operation == "+":
         return num1 + num2
@@ -16,11 +25,15 @@ def operation(operation):
     else:
         return "Неверная операция"
 
-num1 = float(input("Введите первое число: "))
-num2 = float(input("Введите второе число: "))
 
-print("Выберите операцию: +, -, *, /, //, %")
+num1 = validate_input ("Введите первое число: ")
+num2 = validate_input ("Введите второе число: ")
+
+
+print("\nВыберите операцию: +, -, *, /, //, %")
 operation_input = input("Введите операцию: ")
+
 result = operation(operation_input)
+
 print(f"Результат: {result:g}")
 
