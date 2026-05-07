@@ -1,13 +1,24 @@
-# Расчет бюджета: Создайте переменные для доходов и расходов. Посчитайте остаток, используя типы float.
 
 def calculate_budget():
-    budget_balance = income - expenses
-    return budget_balance
 
-income = float(input("Enter your income: "))
-expenses = float(input("Enter your expenses: "))
-budget_balance = income - expenses
+    while True:
+        try:
+            income = float(input("Enter your income: "))
+            expense = float(input("Enter your expense: "))
+            if income < 0 or expense < 0:
+                print("Income and expense should be non-negative. Please try again.\n")
+                continue
+            return income, expense
+        except ValueError:
+            print("Income and expense should be non-negative. Please try again.\n")
 
-print(f"Your budget balance is: {budget_balance:.2f}$")
+income, expense = calculate_budget()
+budget = income - expense
+
+print(f"Your budget is {budget:.2f}$.")
+
+
+
+
 
 
