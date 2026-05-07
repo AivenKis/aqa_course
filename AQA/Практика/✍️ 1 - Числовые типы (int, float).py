@@ -4,8 +4,9 @@
 def temperature_converter():
     celsius = float(input("Введите температуру в °C:"))
     fahrenheit = (celsius * 1.8) + 32
-    return fahrenheit
-print(f"Это будет {temperature_converter()} °F")
+    return celsius, fahrenheit
+celsius, fahrenheit = temperature_converter()
+print(f"{celsius}°C = {fahrenheit:.1f} °F")
 
 
 
