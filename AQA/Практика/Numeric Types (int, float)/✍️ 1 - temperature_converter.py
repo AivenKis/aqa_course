@@ -5,7 +5,7 @@ def temperature_converter():
             value = float(input("Enter temperature in Celsius:"))
             return value
         except ValueError:
-            print("ERROR: Please enter a numeric value")
+            print("ERROR: Please enter a numeric value\n")
 
 
 

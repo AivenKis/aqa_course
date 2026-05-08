@@ -1,37 +1,23 @@
-def validate_input(prompt: str) -> float:
+def validate_input(prompt: str):
     while True:
         try:
             return float(input(prompt))
-
         except ValueError:
-            print("ERROR! Please enter a number.\n")
+            print("Please enter a numeric value.\n")
 
+def show_operation(num1: float, num2: float):
+    print(f"Sum:                                {num1 + num2:g}")
+    print(f"Difference:                         {num1 - num2:g}")
+    print(f"Multiplication:                     {num1 * num2:g}")
 
-def operation(operation):
-    if operation == "+":
-        return num1 + num2
-    elif operation == "-":
-        return num1 - num2
-    elif operation == "*":
-        return num1 * num2
-    elif operation == "/":
-        return num1 / num2
-    elif operation == "//":
-        return num1 // num2
-    elif operation == "%":
-        return num1 % num2
+    if num2 != 0:
+        print(f"Quotient:                           {num1 / num2:g}")
+        print(f"Integer Division:                   {num1 // num2:g}")
+        print(f"Remainder:                          {num1 % num2:g}")
     else:
-        return "Неверная операция"
+        print("Cannot divide by zero.")
 
+num1 = validate_input("Enter first number: ")
+num2 = validate_input("Enter second number: ")
 
-num1 = validate_input ("Введите первое число: ")
-num2 = validate_input ("Введите второе число: ")
-
-
-print("\nВыберите операцию: +, -, *, /, //, %")
-operation_input = input("Введите операцию: ")
-
-result = operation(operation_input)
-
-print(f"Результат: {result:g}")
-
+show_operation(num1, num2)
