@@ -22,7 +22,7 @@ def name_analyzer():
 
 
     reversed_name = user_name[::-1]
-    upper_name = user_name.upper()
+    upper_name = reversed_name.upper()
     length = len(user_name)
 
 
