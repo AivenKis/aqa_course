@@ -1,0 +1,11 @@
+# Word temporary files
+~$*.docx
+*.docx
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# PyCharm
+.idea/
