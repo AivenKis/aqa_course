@@ -10,9 +10,21 @@ phone_book = {
     'Helena Fisher': 79557779933
 }
 
+
+
 def add_contact(phone_book, name, phone):
-    
-test
+    phone_book[name] = phone
+    return phone_book
+print(phone_book)
+
+
+
+
+
+
+
+
+
 
 
 
