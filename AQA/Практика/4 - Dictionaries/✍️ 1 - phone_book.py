@@ -36,10 +36,7 @@ def delete_contact(phone_book, name):
     return phone_book
 
 
-
-
-
-
+# ========================== ТЕСТИРОВАНИЕ ================================================
 
 phone_book = {
     'Anton Shitov': 79664578899,
@@ -52,10 +49,10 @@ phone_book = {
 print("\nТелефонная книга до изменений содержит", len(phone_book), "записи:", phone_book)
 
 print("\nТест 1: Добавление нового контакта")
-result = add_contact(phone_book, 'Anton Shitov', 79876543210)
+result = add_contact(phone_book, 'Ivan Kiselev', 79876543210)
 
-assert 'Anton Shitov' in result
-assert result['Anton Shitov'] == 79876543210
+assert 'Ivan Kiselev' in result
+assert result['Ivan Kiselev'] == 79876543210
 print("PASSED")
 
 
@@ -68,9 +65,9 @@ print("PASSED")
 
 
 print("\nТест 3: Удаление существующего контакта")
-result = delete_contact(phone_book, 'Pavel Kulakov')
+result = delete_contact(phone_book, 'Vika Lapina')
 
-assert 'Pavel Kulakov' not in result
+assert 'Vika Lapina' not in result
 print("PASSED\n")
 
 print("\nТелефонная книга после изменений содержит", len(phone_book), "записи:", phone_book)
