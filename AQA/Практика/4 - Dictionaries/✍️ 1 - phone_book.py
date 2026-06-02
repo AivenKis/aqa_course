@@ -65,9 +65,9 @@ print("PASSED")
 
 
 print("\nТест 3: Удаление существующего контакта")
-result = delete_contact(phone_book, 'Vika Lapina')
+result = delete_contact(phone_book, 'Pavel Kulakov')
 
-assert 'Vika Lapina' not in result
+assert 'Pavel Kulakov' not in result
 print("PASSED\n")
 
 print("\nТелефонная книга после изменений содержит", len(phone_book), "записи:", phone_book)
