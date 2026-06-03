@@ -21,12 +21,10 @@ def print_character_count(char_count):
         else:
             print(f"Символ '{char}' встречается {count} раз")
 
-def main():
-    user_input = input('Введите пожалуйста строку для анализа: ')
-    result = count_characters(user_input)
-    print_character_count(result)
+
+user_input = input('Введите пожалуйста строку для анализа: ')
+result = count_characters(user_input)
+print_character_count(result)
 
 
-if __name__ == '__main__':
-    main()
 
