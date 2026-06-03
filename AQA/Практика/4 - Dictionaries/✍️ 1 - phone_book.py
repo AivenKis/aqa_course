@@ -10,8 +10,6 @@ def add_contact(phone_book, name, phone):
 
     return phone_book
 
-
-
 def update_contact(phone_book, name, new_phone):
 
     if name in phone_book:
@@ -22,9 +20,6 @@ def update_contact(phone_book, name, new_phone):
         print(f"Контакт '{name}' не найден. Невозможно обновить номер телефона.")
 
     return phone_book
-
-
-
 
 def delete_contact(phone_book, name):
     if name in phone_book:
@@ -40,13 +35,13 @@ def delete_contact(phone_book, name):
 
 phone_book = {
     'Anton Shitov': 79664578899,
-    "Ivan Elizarov": 79345672211,
+    'Ivan Elizarov': 79345672211,
     'Pavel Kulakov': 79432115677,
     'Helena Fisher': 79557779933
 }
 
 
-print("\nТелефонная книга до изменений содержит", len(phone_book), "записи:", phone_book)
+print("\nТелефонная книга до изменений содержит", len(phone_book), "записи:\n", phone_book)
 
 print("\nТест 1: Добавление нового контакта")
 result = add_contact(phone_book, 'Ivan Kiselev', 79876543210)
@@ -70,8 +65,9 @@ result = delete_contact(phone_book, 'Pavel Kulakov')
 assert 'Pavel Kulakov' not in result
 print("PASSED\n")
 
-print("\nТелефонная книга после изменений содержит", len(phone_book), "записи:", phone_book)
+print("\nТелефонная книга после изменений содержит", len(phone_book), "записи:\n", phone_book)
 
+print(phone_book.get('Vika'))
 
 
 
