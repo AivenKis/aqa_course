@@ -1,23 +1,36 @@
-def calculate_budget():
+def get_income():
 
     while True:
         try:
-            income = float(input("Enter your income: "))
-            expense = float(input("Enter your expense: "))
-            if income < 0 or expense < 0:
-                print("Income and expense should be non-negative. Please try again.\n")
+            value = float(input("Please enter a income: "))
+            if value < 0:
+                print("Income should be non-negative. Please try again.\n")
                 continue
-            return income, expense
+            return value
         except ValueError:
-            print("Income and expense should be non-negative. Please try again.\n")
-
-income, expense = calculate_budget()
-budget = income - expense
-
-print(f"Your budget is {budget:.2f}$.")
+            print("ERROR: Please enter a numeric value.\n")
 
 
 
+def get_expense():
+    while True:
+        try:
+            value = float(input("Please enter a expense: "))
+            if value < 0:
+                print("Expense should be non-negative. Please try again.\n")
+                continue
+            return value
+        except ValueError:
+            print("ERROR: Please enter a numeric value.\n")
+
+def calculate_budget(income, expense):
+    return income - expense
+
+
+income = get_income()
+expense = get_expense()
+budget = calculate_budget(income, expense)
+print(f"Your budget is: {budget:.2f}$")
 
 
 
