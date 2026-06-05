@@ -1,11 +1,14 @@
-def validate_input(prompt: str):
+def input_number(prompt: str):
     while True:
         try:
             return float(input(prompt))
         except ValueError:
             print("Please enter a numeric value.\n")
 
-def show_operation(num1: float, num2: float):
+def display_results(num1: float, num2: float):
+    print()
+    print(f"Operations result: ")
+    print('_______________________')
     print(f"Sum:                                {num1 + num2:g}")
     print(f"Difference:                         {num1 - num2:g}")
     print(f"Multiplication:                     {num1 * num2:g}")
@@ -17,7 +20,9 @@ def show_operation(num1: float, num2: float):
     else:
         print("Cannot divide by zero.")
 
-num1 = validate_input("Enter first number: ")
-num2 = validate_input("Enter second number: ")
+num1 = input_number("Enter first number: ")
+num2 = input_number("Enter second number: ")
 
-show_operation(num1, num2)
+display_results(num1, num2)
+
+
