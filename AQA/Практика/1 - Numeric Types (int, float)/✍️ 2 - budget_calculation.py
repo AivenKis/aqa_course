@@ -1,3 +1,7 @@
+#                                                               Budget calculation:
+#                                           Create variables for income and expenses. Calculate the remainder using float types.
+
+
 def get_income():
 
     while True:

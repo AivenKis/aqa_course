@@ -1,4 +1,10 @@
-def get_name(prompt: str) -> str:
+#                                                       Name Analyzer:
+#                                           The user enters the first and last name.
+#                   Print them in reverse order, capitalize all the letters, and calculate the total length of the string.
+
+
+def get_name(prompt: str, min_length = 3) -> str:
+
     while True:
         name = input(prompt).strip()
 
@@ -6,11 +12,11 @@ def get_name(prompt: str) -> str:
             print("ERROR: The first and last name cannot be empty.\n")
             continue
 
-        if not  name.replace("-", "").replace("'", "").isalpha():
+        if not  name.replace("-", "").replace("'", ""). replace(" ", ""). isalpha():
             print("ERROR: Name should contain only letters.\n")
             continue
 
-        if len(name) < 2:
+        if len(name) < min_length:
             print("ERROR: Name must be at least 2 characters long.\n")
             continue
 
@@ -23,16 +29,16 @@ def analyze_name(first_name: str, last_name:str) -> None:
     upper_name = reversed_name.upper()
     total_length = len(first_name) + len(last_name) + 1
 
-    print("\n" + "=" * 40)
-    print(f"В обратном порядке:     {reversed_name}")
-    print(f"Заглавными:             {upper_name}")
-    print(f"Длина строки:           {total_length}")
-    print("=" * 40)
+    print("\n" + "=" * 50)
+    print(f"Reversed and Uppercase:             {upper_name}")
+    print(f"Line length:                        {total_length}")
+    print("=" * 50)
 
 
 first_name = get_name("Enter your first name: ")
 last_name = get_name("Enter your last name: ")
 analyze_name(first_name, last_name)
+
 
 
 

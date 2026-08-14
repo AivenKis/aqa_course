@@ -1,3 +1,8 @@
+#                                                                                   Operations:
+#                                           Ask the user to enter two numbers and output their sum, difference, product, quotient,
+#                                                              the result of integer division and the remainder of the division.
+
+
 def input_number(prompt: str):
     while True:
         try:
@@ -9,14 +14,14 @@ def display_results(num1: float, num2: float):
     print()
     print(f"Operations result: ")
     print('_______________________')
-    print(f"Sum:                                {num1 + num2:g}")
-    print(f"Difference:                         {num1 - num2:g}")
-    print(f"Multiplication:                     {num1 * num2:g}")
+    print(f"Sum:                                            {num1 + num2:g}")
+    print(f"Difference:                                     {num1 - num2:g}")
+    print(f"Multiplication:                                 {num1 * num2:g}")
 
     if num2 != 0:
-        print(f"Quotient:                           {num1 / num2:g}")
-        print(f"Integer Division:                   {num1 // num2:g}")
-        print(f"Remainder:                          {num1 % num2:g}")
+        print(f"Quotient:                                       {num1 / num2:g}")
+        print(f"Integer Division:                               {num1 // num2:g}")
+        print(f"Remainder:                                      {num1 % num2:g}")
     else:
         print("Cannot divide by zero.")
 
