@@ -39,3 +39,5 @@ first_name = get_name("Enter your first name: ")
 last_name = get_name("Enter your last name: ")
 
 analyze_name(first_name, last_name)
+
+
