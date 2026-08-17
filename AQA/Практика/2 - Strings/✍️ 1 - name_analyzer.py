@@ -9,7 +9,7 @@ def get_name(prompt: str, min_length = 3) -> str:
         name = input(prompt).strip()
 
         if not name:
-            print("ERROR: The first and last name cannot be empty.\n")
+            print("ERROR: Name cannot be empty.\n")
             continue
 
         if not  name.replace("-", "").replace("'", ""). replace(" ", ""). isalpha():
@@ -17,7 +17,7 @@ def get_name(prompt: str, min_length = 3) -> str:
             continue
 
         if len(name) < min_length:
-            print("ERROR: Name must be at least 2 characters long.\n")
+            print(f"ERROR: Name must be at least {min_length} characters long.\n")
             continue
 
         return name
@@ -37,11 +37,5 @@ def analyze_name(first_name: str, last_name:str) -> None:
 
 first_name = get_name("Enter your first name: ")
 last_name = get_name("Enter your last name: ")
+
 analyze_name(first_name, last_name)
-
-
-
-
-
-
-
