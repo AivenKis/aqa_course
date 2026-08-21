@@ -1,17 +1,23 @@
-def slices(text:str):
+#                                                                 Slicing:
+#                           from the string “PythonProgramming”, output the first 6 characters,
+#                             the last 3 characters, and the string with every other character.
 
-    firs_six = text[:6]
+
+def slices(text:str) -> tuple[str, str, str]:
+
+    first_six = text[:6]
     last_three = text[-3:]
     every_second = text[::2]
 
-    return firs_six, last_three, every_second
+    return first_six, last_three, every_second
 
-result = slices("PythonProgramming")
-first, last, every_second = result
+
+first, last, every_second = slices("PythonProgramming")
 
 print(first)
 print(last)
 print(every_second)
+
 
 
 

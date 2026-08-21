@@ -1,5 +1,5 @@
 #                                                                   Palindrome:
-#                                           Write a function that checks whether the entered string is a palindrome (reads the same in both directions).
+#                                          Write a function that checks whether the entered string is a palindrome (reads the same in both directions).
 
 
 
