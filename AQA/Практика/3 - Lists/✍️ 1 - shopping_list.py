@@ -1,12 +1,14 @@
-def shopping_list(products: list) -> list :
-    if len(products) > 1:
-        products.pop(1)
+#                                                                   Shopping list:
+#                       Create a list of 5 products. Add a new product, delete the second item, and sort the list alphabetically.
 
-    products.append('Meat')
+def shopping_list(products: list) -> list:
+    products.append("Meat")
+    del products[1]
     products.sort()
 
-    return products
 
-products = ['Milk', 'Orange', 'Apple', 'Bread', 'Eggs']
-result = shopping_list(products)
-print(result)
+
+products = ["Milk", "Orange", "Cheese", "Apple", "Banana"]
+shopping_list(products)
+print(products)
+
