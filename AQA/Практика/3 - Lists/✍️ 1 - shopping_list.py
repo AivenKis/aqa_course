@@ -12,3 +12,8 @@ products = ["Milk", "Orange", "Cheese", "Apple", "Banana"]
 shopping_list(products)
 print(products)
 
+
+
+
+
+
