@@ -18,7 +18,6 @@ def unique_elements (numbers: list) -> tuple:
 
     return unique, duplicates
 
-
 numbers = [1, 2, 2, 3, 4, 4, 4, 5]
 unique, duplicates = unique_elements(numbers)
 
