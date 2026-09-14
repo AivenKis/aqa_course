@@ -36,10 +36,3 @@ print("Duplicates", duplicates)
 
 
 
-
-
-
-
-
-
-
