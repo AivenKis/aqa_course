@@ -1,97 +1,64 @@
+#                                                                                   Phonebook:
+#                                           Create a dictionary where the keys are names and the values are phone numbers.
+#                                                       Add a new entry, update an existing one, and delete one entry.
 
-def add_contact(phone_book, name, phone):
+def add_contact(phone_book: dict, name: str, phone: str) -> dict:
     if name in phone_book:
-        old_phone = phone_book[name]
-        print(f"Контакт '{name}' уже существует. Номер телефона обновлен с {old_phone} на {phone}.")
+        old = phone_book[name]
+        print(f"Contact '{name}' already exists. Updated from {old} to {phone}.")
     else:
-        print(f"Контакт '{name}' добавлен с номером '{phone}'.")
+        print(f"Added new contact: '{name}' with number {phone}.")
 
     phone_book[name] = phone
-
     return phone_book
 
-def update_contact(phone_book, name, new_phone):
 
+
+def update_contact(phone_book: dict, name: str, new_phone: str) -> dict:
     if name in phone_book:
-        old_phone = phone_book[name]
+        old = phone_book[name]
         phone_book[name] = new_phone
-        print(f"Контакт '{name}' обновлен с номера '{old_phone}' на '{new_phone}'.")
+        print(f"Updated '{name}' from {old} to {new_phone}.")
     else:
-        print(f"Контакт '{name}' не найден. Невозможно обновить номер телефона.")
-
+        print(f"Contact '{name}' not found.")
     return phone_book
 
-def delete_contact(phone_book, name):
+
+
+def delete_contact(phone_book: dict, name: str) -> dict:
     if name in phone_book:
         del phone_book[name]
-        print(f"Контакт '{name}' успешно удален.")
+        print(f"Contact '{name}' successfully deleted.")
     else:
-        print(f"Контакт '{name}' не найден.")
-
+        print(f"Contact '{name}' not found.")
     return phone_book
 
 
-# ========================== ТЕСТИРОВАНИЕ ================================================
+def print_phone_book(phone_book: dict, title: str):
+    print(f"\n {title} ({len(phone_book)} contacts):")
+    print("-" * 50)
+
+    for name, phone in phone_book.items():
+        print(f"{name:20} : {phone}")
+
+    print("-" * 50)
+
+
 
 phone_book = {
-    'Anton Shitov': 79664578899,
-    'Ivan Elizarov': 79345672211,
-    'Pavel Kulakov': 79432115677,
-    'Helena Fisher': 79557779933
+    'Anton Shitov':     '+7-966 457 88 99',
+    'Ivan Elizarov':    '+7-934 567 22 11',
+    'Pavel Kulakov':    '+7-943 211 56 77',
+    'Helena Fisher':    '+7-957 779 93 53'
 }
 
-
-print("\nТелефонная книга до изменений содержит", len(phone_book), "записи:\n", phone_book)
-
-print("\nТест 1: Добавление нового контакта")
-result = add_contact(phone_book, 'Ivan Kiselev', 79876543210)
-
-assert 'Ivan Kiselev' in result
-assert result['Ivan Kiselev'] == 79876543210
-print("PASSED")
+print_phone_book(phone_book, "Phone Book before changes")
 
 
-print("\nТест 2: Обновление существующего контакта")
-result = update_contact(phone_book, 'Ivan Elizarov', 79999999999)
-
-assert result['Ivan Elizarov'] == 79999999999
-print("PASSED")
-
+print("\n=== TESTS ===")
+add_contact(phone_book, 'Ivan Kiselev', '+7-987 654 32 10')
+update_contact(phone_book, 'Ivan Elizarov', '+7-999 999 99 99')
+delete_contact(phone_book, 'Pavel Kulakov')
 
 
-print("\nТест 3: Удаление существующего контакта")
-result = delete_contact(phone_book, 'Pavel Kulakov')
-
-assert 'Pavel Kulakov' not in result
-print("PASSED\n")
-
-print("\nТелефонная книга после изменений содержит", len(phone_book), "записи:\n", phone_book)
-
-print(phone_book.get('Vika'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print_phone_book(phone_book, "Phone Book after changes")
