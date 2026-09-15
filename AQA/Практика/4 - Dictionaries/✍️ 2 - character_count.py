@@ -12,26 +12,33 @@ def count_characters(text:str) -> dict:
     return char_count
 
 
-def print_character_count(char_count: dict):
-    if not  char_count:
-        print("ERROR: The string cannot be empty." )
-        return
-
-    print('\n Character count result:')
+def print_results(char_count: dict):
+    print('\nCharacter count result:')
     print('-' * 50)
+
 
     for char, count in char_count.items():
         if char == " ":
-            print(f"Пробел{' ':14}→ {count} раз")
-        elif char == "\n":
-            print(f"Новая строка{' ':8}→ {count} раз")
+            print(f"Space{' ':14} → {count} times")
         else:
-            print(f"'{char}'{' ':15}→ {count} раз")
-    print("-" * 40)
+            print(f"'{char}'{' ':16} → {count} times")
+    print("-" * 50)
 
 
 
+while True:
+    user_input = input('Please enter a string for analysis: ').strip()
 
+
+
+    if not user_input:
+        print("ERROR: The string cannot be empty.\n" )
+        continue
+
+    lower_text = user_input.lower()
+    result = count_characters(lower_text)
+    print_results(result)
+    break
 
 
 
