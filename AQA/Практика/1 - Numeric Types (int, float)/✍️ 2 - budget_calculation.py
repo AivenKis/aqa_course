@@ -14,6 +14,8 @@ def get_income():
         except ValueError:
             print("ERROR: Please enter a numeric value.\n")
 
+
+
 def get_expense():
     while True:
         try:
@@ -24,6 +26,8 @@ def get_expense():
             return value
         except ValueError:
             print("ERROR: Please enter a numeric value.\n")
+
+
 
 def calculate_budget(income, expense):
     return income - expense

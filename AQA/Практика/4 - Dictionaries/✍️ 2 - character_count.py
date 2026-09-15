@@ -12,6 +12,7 @@ def count_characters(text:str) -> dict:
     return char_count
 
 
+
 def print_results(char_count: dict):
     print('\nCharacter count result:')
     print('-' * 50)

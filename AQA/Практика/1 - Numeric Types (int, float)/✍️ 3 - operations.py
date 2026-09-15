@@ -10,6 +10,8 @@ def input_number(prompt: str):
         except ValueError:
             print("Please enter a numeric value.\n")
 
+
+
 def display_results(num1: float, num2: float):
     print()
     print(f"Operations result: ")

@@ -34,6 +34,7 @@ def delete_contact(phone_book: dict, name: str) -> dict:
     return phone_book
 
 
+
 def print_phone_book(phone_book: dict, title: str):
     print(f"\n {title} ({len(phone_book)} contacts):")
     print("-" * 50)

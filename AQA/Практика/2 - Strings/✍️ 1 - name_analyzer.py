@@ -23,6 +23,7 @@ def get_name(prompt: str, min_length = 3) -> str:
         return name
 
 
+
 def analyze_name(first_name: str, last_name:str) -> None:
 
     reversed_name = f"{last_name} {first_name}"

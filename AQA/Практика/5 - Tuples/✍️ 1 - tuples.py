@@ -9,6 +9,7 @@ def create_tuple():
     return ('House of Cards', 'Squid Game', 'The Witcher')
 
 
+
 def try_modify_tuple(original_tuple):
 
     try:
@@ -21,11 +22,13 @@ def try_modify_tuple(original_tuple):
         print('Unknown error: skipped')
 
 
+
 def modify_tuple_element(original_tuple):
     netflix_show_list = list(original_tuple)
     netflix_show_list[2] = 'Desperate Housewives'
     netflix_show_tuple = tuple(netflix_show_list)
     return netflix_show_tuple
+
 
 
 def show_results(original, modified: object = None):
