@@ -6,7 +6,7 @@
 
 
 def create_tuple():
-    return ('House of Cards', 'Squid Game', 'The Witcher')
+    return 'House of Cards', 'Squid Game', 'The Witcher'
 
 
 
