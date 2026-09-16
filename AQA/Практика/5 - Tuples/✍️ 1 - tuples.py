@@ -15,23 +15,23 @@ def try_modify_tuple(original_tuple):
     try:
         original_tuple[2] = 'Desperate Housewives'
 
-    except TypeError:
-        print("TypeError: 'tuple' object does not support item assignment")
+    except TypeError as error:
+        print('TypeError:', error)
 
-    except Exception:
-        print('Unknown error: skipped')
+    except Exception as error:
+        print('Unknown error:', error)
 
 
 
 def modify_tuple_element(original_tuple):
-    netflix_show_list = list(original_tuple)
-    netflix_show_list[2] = 'Desperate Housewives'
-    netflix_show_tuple = tuple(netflix_show_list)
-    return netflix_show_tuple
+    show_list = list(original_tuple)
+    show_list[2] = 'Desperate Housewives'
+    show_tuple = tuple(show_list)
+    return show_tuple
 
 
 
-def show_results(original, modified: object = None):
+def show_results(original, modified = None):
 
     print("\n" + "="*60)
     print(f'Original tuple: {original}')
@@ -40,7 +40,7 @@ def show_results(original, modified: object = None):
 
 
 original = create_tuple()
-show_results(original)
+show_results(original)                              # Haven't cheated yet
 
 try_modify_tuple(original)
 
